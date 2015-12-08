@@ -1,7 +1,22 @@
-The chef-repo
+twc-chef-intermediate-training
 ===============
 
-[ This is a clone of [chef-training/chef-fundamentals-repo](https://github.com/chef-training/chef-fundamentals-repo) ]
+This is a clone of [chef-training/chef-fundamentals-repo](https://github.com/chef-training/chef-fundamentals-repo) for The Weather Company ([weather.com](weather.com)) Intermediate Chef training.
+
+Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://drive.google.com/a/weather.com/file/d/0B7e8h9mtaJSSbDZ3WlkzZDBpcUE/view?usp=sharing)
+
+# Notes
+
+- If you attempt to perform a `knife bootstrap` with you validator key in `.chef` you'll get an authentication error.  See [https://www.chef.io/blog/2015/04/16/validatorless-bootstraps/](https://www.chef.io/blog/2015/04/16/validatorless-bootstraps/)
+
+# Common commands
+
+## Knife
+
+- `knife bootstrap <ipaddr> -x <user> -P <pass> --sudo -N <nodename> -r 'role[<rolename>]' --bootstrap-version <ver>`
+
+
+# Original Readme from chef-training/chef-fundamentals-repo
 
 All installations require a central workspace known as the chef-repo. This is a place where primitive objects--cookbooks, roles, environments, data bags, and chef-repo configuration files--are stored and managed.
 
