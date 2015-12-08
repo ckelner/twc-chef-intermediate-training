@@ -1,5 +1,7 @@
 # This is a re-write of default.erb that was done live during the TWC training
-package "httpd"
+package "httpd" do
+  action :install
+end
 
 # Disable the default vhost
 execute "mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled" do
@@ -41,4 +43,7 @@ node["apache"]["sites"].each do |site_name, site_data|
       :nose => site_data["nose"],
     )
   end
+end
+service "httpd" do
+  action [ :enable, :start ]
 end
