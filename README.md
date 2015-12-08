@@ -29,6 +29,7 @@ Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://
   - uploads all data bags in this repo
 - `knife bootstrap <ipaddr> -x <user> -P <pass> --sudo -N <nodename> -r 'role[<rolename>]' --bootstrap-version <ver>`
   - bootstraps an existing node using user/name password and users key from Chef org.  Does not use the validator key.
+- `knife ssh "name:<nodename>" -x <user> -P <pass> "sudo chef-client"`
 
 # Original Readme from chef-training/chef-fundamentals-repo
 
