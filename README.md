@@ -11,6 +11,7 @@ Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://
 - Order of attribute precedence:
   ![img](https://docs.chef.io/_images/overview_chef_attributes_table.png)
   - For more, see: [https://docs.chef.io/attributes.html](https://docs.chef.io/attributes.html)
+- File Specificity for templates & files: [https://docs.chef.io/resource_template.html#file-specificity](https://docs.chef.io/resource_template.html#file-specificity)
 
 # Common commands
 
