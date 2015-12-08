@@ -36,8 +36,8 @@ node["apache"]["sites"].each do | site_name, site_data |
     source "index.html.erb"
     mode "0644"
     variables(
-      :document_root => document_root,
-      :port => site_date["port"],
+      :site_name => site_name,
+      :port => site_data["port"],
       :nose => site_date["nose"],
     )
   end
