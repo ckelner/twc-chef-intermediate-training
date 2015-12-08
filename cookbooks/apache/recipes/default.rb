@@ -12,7 +12,7 @@ package "httpd" do
 end
 
 # Disable the default virtual host
-execute "mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled" do 
+execute "mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled" do
   only_if do
     File.exist?("/etc/httpd/conf.d/welcome.conf")
   end
@@ -21,10 +21,10 @@ end
 
 # Iterate over the apache sites
 node["apache"]["sites"].each do |site_name, site_data|
-# Set the document root
+  # Set the document root
   document_root = "/srv/apache/#{site_name}"
 
-# Add a template for Apache virtual host configuration
+  # Add a template for Apache virtual host configuration
   template "/etc/httpd/conf.d/#{site_name}.conf" do
     source "custom.erb"
     mode "0644"
