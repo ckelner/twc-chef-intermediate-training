@@ -1,17 +1,6 @@
 # Chef
-.chef
 .chef/*.pem
 .chef/encrypted_data_bag_secret
-
-# Vagrant
-.vagrant
-
-# Bundler
-bin/*
-.bundle/*
-
-.kitchen/
-.kitchen.local.yml
 
 # Ruby
 .rake_test_cache
@@ -61,3 +50,16 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+# Git
+.git/
+.gitignore
+.gitmodules
+
+# Subversion
+.svn/
+
+# Mercurial
+.hg/*
+*/.hg/*
+.hgignore

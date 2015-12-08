@@ -13,8 +13,18 @@ Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://
 
 ## Knife
 
-- `knife bootstrap <ipaddr> -x <user> -P <pass> --sudo -N <nodename> -r 'role[<rolename>]' --bootstrap-version <ver>`
+### From workstation
 
+- `knife cookbook upload -a`
+  - uploads all cookbooks in this repo
+- `knife role from file base.rb web.rb`
+  - uploads all roles in this repo
+- `knife environment from file dev.rb production.rb`
+  - uploads all the environments in this repo
+- `knife upload data_bags`
+  - uploads all data bags in this repo
+- `knife bootstrap <ipaddr> -x <user> -P <pass> --sudo -N <nodename> -r 'role[<rolename>]' --bootstrap-version <ver>`
+  - bootstraps an existing node using user/name password and users key from Chef org.  Does not use the validator key.
 
 # Original Readme from chef-training/chef-fundamentals-repo
 
