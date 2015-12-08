@@ -8,6 +8,9 @@ Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://
 # Notes
 
 - If you attempt to perform a `knife bootstrap` with you validator key in `.chef` you'll get an authentication error.  See [https://www.chef.io/blog/2015/04/16/validatorless-bootstraps/](https://www.chef.io/blog/2015/04/16/validatorless-bootstraps/)
+- Order of attribute precedence:
+  ![img](https://docs.chef.io/_images/overview_chef_attributes_table.png)
+  - For more, see: [https://docs.chef.io/attributes.html](https://docs.chef.io/attributes.html)
 
 # Common commands
 
