@@ -4,50 +4,20 @@ package "httpd" do
 end
 
 # Disable the default vhost
-execute "mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled" do
-  only_if do
-    File.exists?("/etc/httpd/conf.d/welcome.conf")
-  end
+apache_vhost "welcome" do
+  action :remove
   notifies :restart, "service[httpd]"
 end
 
 # Iterate over the apache sites
 node["apache"]["sites"].each do |site_name, site_data|
-  # set document root
-  document_root = "/srv/apache/#{site_name}"
-
-  # Add a directory resource to create the document_root
-  directory document_root do
-    mode "0755"
-    recursive true
-  end
-
-  # Add a template for Apache vhost conf
-  template "/etc/httpd/conf.d/#{site_name}.conf" do
-    source "custom.erb"
-    mode "0644"
-    variables(
-      :document_root => document_root,
-      :port => site_data["port"]
-    )
+  # Enable an Apache Virtualhost
+  apache_vhost site_name do
+    site_port site_data["port"]
+    action :create
     notifies :restart, "service[httpd]"
+    site_nose site_data["nose"]
   end
-
-  # Add a template for Apache vhost conf
-  template "/#{document_root}/index.html" do
-    source "index.html.erb"
-    mode "0644"
-    variables(
-      :site_name => site_name,
-      :port => site_data["port"],
-      :nose => site_data["nose"],
-    )
-  end
-end
-
-# Enable an Apache Virtualhost
-apache_vhost "lions" do
-  action :create
 end
 
 service "httpd" do
