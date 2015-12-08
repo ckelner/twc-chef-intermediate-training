@@ -44,6 +44,12 @@ node["apache"]["sites"].each do |site_name, site_data|
     )
   end
 end
+
+# Enable an Apache Virtualhost
+apache_vhost "lions" do
+  action :create
+end
+
 service "httpd" do
   action [ :enable, :start ]
 end
