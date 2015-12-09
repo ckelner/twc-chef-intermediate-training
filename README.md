@@ -4,6 +4,7 @@ twc-chef-intermediate-training
 This is a clone of [chef-training/chef-fundamentals-repo](https://github.com/chef-training/chef-fundamentals-repo) for The Weather Company ([weather.com](weather.com)) Intermediate Chef training.
 
 Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://drive.google.com/a/weather.com/file/d/0B7e8h9mtaJSSbDZ3WlkzZDBpcUE/view?usp=sharing)
+Replace section 6 with [06-implementing_chef_handlers-file_handler.pptx.pdf](https://drive.google.com/a/weather.com/file/d/0B7e8h9mtaJSSaTdSRjhiLXZrd0k/view?usp=sharing)
 
 # Notes
 
