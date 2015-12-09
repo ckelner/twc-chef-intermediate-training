@@ -48,6 +48,13 @@ Replace section 6 with [06-implementing_chef_handlers-file_handler.pptx.pdf](htt
     FC034: Unused template variables: cookbooks/apache/templates/default/index.html.erb:1
     ```
 
+## Rubocop
+
+- `rubocop`
+  - Runs rubocop - A Ruby static code analyzer
+- `rubocop --auto-gen-config`
+  - generates a rubocop ignore file
+
 # Original Readme from chef-training/chef-fundamentals-repo
 
 All installations require a central workspace known as the chef-repo. This is a place where primitive objects--cookbooks, roles, environments, data bags, and chef-repo configuration files--are stored and managed.
