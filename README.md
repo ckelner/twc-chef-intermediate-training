@@ -39,6 +39,8 @@ Replace section 6 with [06-implementing_chef_handlers-file_handler.pptx.pdf](htt
 
 ## Foodcritic
 
+A cookbook linter
+
 - `foodcritic <cookbook-path>`
   - Runs foodcritic against a cookbook
   - example output:
@@ -50,10 +52,22 @@ Replace section 6 with [06-implementing_chef_handlers-file_handler.pptx.pdf](htt
 
 ## Rubocop
 
+A Ruby static code analyzer
+
 - `rubocop`
-  - Runs rubocop - A Ruby static code analyzer
+  - Runs rubocop
 - `rubocop --auto-gen-config`
   - generates a rubocop ignore file
+
+## Rspec // Chefspec
+
+See: [https://docs.chef.io/chefspec.html](https://docs.chef.io/chefspec.html)
+
+- `rspec --init`
+  - Initialize rspec in a cookbook
+- `rspec`
+  - Runs rspec
+
 
 # Original Readme from chef-training/chef-fundamentals-repo
 
