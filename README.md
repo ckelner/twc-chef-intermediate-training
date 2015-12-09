@@ -69,9 +69,9 @@ See: [https://docs.chef.io/chefspec.html](https://docs.chef.io/chefspec.html)
   - Runs rspec
 
 
-# ##########################
+# ==========================
 # Original Readme from chef-training/chef-fundamentals-repo
-# ##########################
+# ==========================
 
 All installations require a central workspace known as the chef-repo. This is a place where primitive objects--cookbooks, roles, environments, data bags, and chef-repo configuration files--are stored and managed.
 
