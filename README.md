@@ -31,8 +31,10 @@ Training PDF (internal TWC Google Drive) [Chef_Intermediate_v1.2.1.pdf](https://
 
 ## Chef
 
-- `chef generate cookbook <path-and-file-name>`
+- `chef generate cookbook <path-to-cookbook-and-file-name>`
   - guess? :)
+- `chef generate file <path-to-cookbook> <filename>`
+  - guess again?
 
 # Original Readme from chef-training/chef-fundamentals-repo
 
