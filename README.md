@@ -37,6 +37,17 @@ Replace section 6 with [06-implementing_chef_handlers-file_handler.pptx.pdf](htt
 - `chef generate file <path-to-cookbook> <filename>`
   - guess again?
 
+## Foodcritic
+
+- `foodcritic <cookbook-path>`
+  - Runs foodcritic against a cookbook
+  - example output:
+    ```
+    FC003: Check whether you are running with chef server before using server-specific features: cookbooks/apache/recipes/ip-logger.rb:1
+    FC016: LWRP does not declare a default action: cookbooks/apache/resources/vhost.rb:1
+    FC034: Unused template variables: cookbooks/apache/templates/default/index.html.erb:1
+    ```
+
 # Original Readme from chef-training/chef-fundamentals-repo
 
 All installations require a central workspace known as the chef-repo. This is a place where primitive objects--cookbooks, roles, environments, data bags, and chef-repo configuration files--are stored and managed.
